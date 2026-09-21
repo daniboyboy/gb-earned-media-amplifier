@@ -40,15 +40,15 @@ def detect_region(url: str) -> str:
 def fetch_article(url: str) -> Article:
     html = trafilatura.fetch_url(url)
     if html is None:
-        raise ValueError(f"No se pudo descargar la página: {url}")
+        raise ValueError(f"Could not download page: {url}")
     raw = trafilatura.extract(html, output_format="json", with_metadata=True)
     if raw is None:
-        raise ValueError(f"No se pudo extraer texto: {url}")
+        raise ValueError(f"Could not extract text: {url}")
     data = json.loads(raw)
     text = data.get("text") or ""
     word_count = len(text.split())
     if word_count < MIN_WORDS:
-        raise ValueError(f"Texto muy corto ({word_count} palabras), posible muro de registro: {url}")
+        raise ValueError(f"Text too short ({word_count} words), possible registration wall: {url}")
     return Article(
         url=url,
         outlet=data.get("sitename") or lookup_outlet(url)["name"],
@@ -70,9 +70,9 @@ def save_article(article: Article) -> Path:
 
 def print_summary(article: Article, path: Path) -> None:
     print(f"\n✔ {article.title}")
-    print(f"  Medio: {article.outlet} | Fecha: {article.published_date} | Región: {article.region}")
-    print(f"  Palabras: {len(article.text.split())} | Guardado en: {path}")
-    print(f"  Inicio: {article.text[:200]}...")
+    print(f"  Outlet: {article.outlet} | Date: {article.published_date} | Region: {article.region}")
+    print(f"  Words: {len(article.text.split())} | Saved to: {path}")
+    print(f"  Preview: {article.text[:200]}...")
 
 
 if __name__ == "__main__":
