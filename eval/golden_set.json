@@ -1,0 +1,47 @@
+{
+  "accurate-job-descriptions-aid-return-to-work": {
+    "coverage_type": "expert_commentary",
+    "gb_spokespeople": ["Irina Simpson"],
+    "direct_quotes": [
+      "The opportunity to receive all of the job descriptions and make sure they’re as current as possible is critical.",
+      "If you say light duty, what does that mean?",
+      "If you say no heavy lifting, is it five pounds? Fifty-five pounds? The definitions can vary."
+    ],
+    "paraphrase_anchors": [
+      "Those outdated documents are often among the first warning signs that a return-to-work program may struggle",
+      "Employers with mature return-to-work programs increasingly supplement written job descriptions",
+      "Even then, communication can break down",
+      "Employers increasingly supplement traditional job descriptions with photographs, videos and predictive analytics",
+      "Machine learning models can identify claims that may benefit from earlier clinical intervention"
+    ],
+    "competitors": ["Paradigm", "Enlyte", "Broadspire", "Sedgwick"],
+    "notes": "Second Simpson quote is interrupted by 'Ms. Simpson said' and must be split into two segments. Article includes a related sidebar story where Simpson also appears."
+  },
+  "automated-drug-reviews-promise-comp-savings-industry-cautious-of-ai": {
+    "coverage_type": "expert_commentary",
+    "gb_spokespeople": ["Leah Sharp"],
+    "direct_quotes": [
+      "It’s never going to replace the judgment call"
+    ],
+    "paraphrase_anchors": [
+      "pharmacy benefit managers do not automatically decide drug authorizations",
+      "Clinical decision-support tools instead give resolution managers and clinical professionals real-time guidance",
+      "AI is being used to summarize medical records, claim notes and treatment timelines"
+    ],
+    "competitors": ["Enlyte", "Sedgwick"],
+    "notes": "GB is named 'Gallagher Bassett Services' in this article. Enlyte and Sedgwick spokespeople make similar 'human in the loop' points and must not be attributed to GB."
+  },
+  "gallagher-bassett-names-sa-gm-as-claims-model-expands-586200": {
+    "coverage_type": "announcement",
+    "gb_spokespeople": ["Shelley Reynolds"],
+    "direct_quotes": [
+      "I’m honoured to take on the permanent role of General Manager for South Australia and continue leading our talented team in supporting employers, injured workers and the broader South Australian community",
+      "I’m passionate about customer experience. We have an experienced team that understands South Australia’s unique environment, and is committed to understanding customer feedback and embedding insights into our operational decision-making."
+    ],
+    "paraphrase_anchors": [
+      "Reynolds has identified customer experience, digital transformation and the use of client feedback"
+    ],
+    "competitors": ["EML"],
+    "notes": "Announcement coverage in Australia: Australian English spelling. ReturnToWorkSA is the scheme administrator, not a competitor. The priorities sentence is treated as a paraphrase of Reynolds' stated position."
+  }
+}
