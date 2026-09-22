@@ -43,3 +43,31 @@ class ArticleAnalysis(BaseModel):
     key_messages: list[KeyMessage]
     themes: list[str]
     other_organizations: list[OtherOrganization]
+
+
+class QuoteAttribution(BaseModel):
+    id: str = Field(description="A Q item ID, for example Q3")
+    speaker: str | None = Field(description="Full name of the person quoted, or null if not a person's speech")
+    organization: str | None
+
+
+class SentenceAttribution(BaseModel):
+    id: str = Field(description="An S item ID, for example S12")
+    conveys_gb_spokesperson: bool
+    speaker: str | None = Field(description="Full name of the GB spokesperson when conveys_gb_spokesperson is true, otherwise null")
+
+
+class KeyMessageDraft(BaseModel):
+    message: str = Field(description="One sentence, in your own words")
+    supporting_id: str = Field(description="The Q or S item ID that supports the message")
+
+
+class AnalystSelection(BaseModel):
+    gb_spokespeople: list[Spokesperson]
+    quote_attributions: list[QuoteAttribution]
+    sentence_attributions: list[SentenceAttribution]
+    coverage_type: Literal["expert_commentary", "feature", "announcement"]
+    coverage_rationale: str
+    key_messages: list[KeyMessageDraft]
+    themes: list[str]
+    other_organizations: list[OtherOrganization]
