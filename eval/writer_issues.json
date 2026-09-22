@@ -1,0 +1,34 @@
+{
+  "accurate-job-descriptions-aid-return-to-work": {
+    "company_page": [],
+    "spokesperson": [
+      {"phrase": "exciting time for innovation", "category": "unsupported_claim", "severity": "blocker"}
+    ],
+    "employee_advocacy": []
+  },
+  "automated-drug-reviews-promise-comp-savings-industry-cautious-of-ai": {
+    "company_page": [
+      {"phrase": "impact cost savings", "category": "misattribution", "severity": "blocker"}
+    ],
+    "spokesperson": [
+      {"phrase": "harness the power of", "category": "tone", "severity": "warning"},
+      {"phrase": "Excited to discuss", "category": "tone", "severity": "warning"}
+    ],
+    "employee_advocacy": [
+      {"phrase": "ensuring that AI enhances", "category": "distortion", "severity": "blocker"}
+    ]
+  },
+  "gallagher-bassett-names-sa-gm-as-claims-model-expands-586200": {
+    "company_page": [
+      {"phrase": "How does leadership impact customer experience", "category": "structure", "severity": "warning"},
+      {"phrase": "will be pivotal", "category": "unsupported_claim", "severity": "blocker"}
+    ],
+    "spokesperson": [
+      {"phrase": "I’m honoured to take on", "category": "style", "severity": "warning"}
+    ],
+    "employee_advocacy": [
+      {"phrase": "the new General Manager", "category": "distortion", "severity": "blocker"},
+      {"phrase": "will strengthen our operations", "category": "unsupported_claim", "severity": "blocker"}
+    ]
+  }
+}

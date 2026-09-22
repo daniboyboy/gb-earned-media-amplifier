@@ -104,3 +104,25 @@ Reference sample: 12 recent posts from the Gallagher Bassett company page and 20
 These patterns are documented in `src/voice_guide.md` and loaded into the writer prompt, replacing the generic tone rules. Fidelity rules (exact quotes, no competitors, no unsupported claims, link added by code) remain in the prompt itself and always apply. Guidance for spokesperson and employee posts is an assumption, because the sample contained no examples of either.
 
 Observation: GB already uses tracked short links (okt.to), so the system delivers the original URL and the team applies its usual link tracking. This replaces the need for UTM parameters on third-party URLs.
+
+## Reviewer
+
+Two layers per post. Rules (code): link appears exactly once, no competitor names, quoted text contained in an article direct quote, every figure present in the article, word count within the voice-guide range. Judge (LLM, temperature 0): claim-level fidelity checked against the full article text, plus voice checked against the voice guide and coverage type. Fidelity and rule violations are blockers; voice and length issues are warnings. A post is approved when it has no blockers.
+
+Evaluation: `eval/writer_issues.json` holds 10 human-annotated issues (6 blockers, 4 warnings) in 9 frozen posts (`eval/fixtures/`), including 2 clean posts to measure false positives.
+
+Evaluator fix: an expected blocker now counts as found only when the reviewer flags it as a blocker. The first scoring gave the reviewer credit for "new General Manager" although it was flagged as a tone warning and described as appropriate.
+
+Reviewer v1 (corrected score): blockers 4/6, warnings 3/4, correct approval decisions 6/9. Failure analysis: (1) compound sentences judged as a whole, missing a conflation of two different tools; (2) the spokesperson's own feelings in first-person drafts judged as unsupported facts, blocking two posts; (3) noisy structure warnings caused by a contradiction between the voice guide (question hooks) and the coverage-type rule (lead with the insight).
+
+Reviewer v2 changes: atomic claim decomposition by subject-action pair; spokesperson feelings judged only as tone; every voice issue must name the rule it breaks; structure rules reconciled.
+
+As with the analyst, all iterations use the same fixtures, so results are development-set scores.
+
+Reviewer v2 results: blockers 4/6, warnings 3/4, correct approval decisions 7/9, extra blockers 0, extra warnings 8. False blockers disappeared, but voice noise increased: the judge reported compliant rules as issues ("which is appropriate"), and applied rules outside their scope (the self-quote rule to a third-person company post; the no-enthusiasm rule to an announcement). The feelings rule was applied inconsistently across the two spokesperson drafts.
+
+Diagnosis: the same failure mode as analyst v3. The schema only allowed the judge to list issues, and the judge decided which rules applied. Reviewer v3 splits the judge into a fidelity call and a voice checklist, where code selects the applicable rules per channel and coverage type and the model answers pass or fail for each.
+
+Reviewer v3.1 (final): the feelings rule was narrowed to a person's own feelings; the voice judge was told the link is appended after the call to action; the no-clichés rule no longer covers enthusiasm. Results: blockers 4/6, warnings 2/4, correct approval decisions 7/9, extra blockers 1 (a plausible real issue not in the golden set), extra warnings 7.
+
+Decision: reviewer iteration stops here. Across v1 to v3.1, blocker recall stayed at 4/6 while the set of detected issues shifted between versions; with 9 posts, further differences cannot be separated from judge variance. The reviewer is positioned as a first line of defence that flags likely problems, with final approval always made by a person. A stronger judge model (JUDGE_MODEL) is available as a future experiment.

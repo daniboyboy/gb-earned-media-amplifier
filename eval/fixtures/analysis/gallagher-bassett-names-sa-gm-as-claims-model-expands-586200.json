@@ -1,0 +1,64 @@
+{
+  "coverage_type": "announcement",
+  "coverage_rationale": "The article focuses on the appointment of Shelley Reynolds as the General Manager for South Australia, which is a significant internal development for Gallagher Bassett.",
+  "gb_spokespeople": [
+    {
+      "name": "Shelley Reynolds",
+      "title": "General Manager for South Australia",
+      "location": "South Australia"
+    }
+  ],
+  "gb_statements": [
+    {
+      "speaker": "Shelley Reynolds",
+      "text": "I’m honoured to take on the permanent role of General Manager for South Australia and continue leading our talented team in supporting employers, injured workers and the broader South Australian community",
+      "type": "direct_quote"
+    },
+    {
+      "speaker": "Shelley Reynolds",
+      "text": "I’m passionate about customer experience. We have an experienced team that understands South Australia’s unique environment, and is committed to understanding customer feedback and embedding insights into our operational decision-making.",
+      "type": "direct_quote"
+    },
+    {
+      "speaker": "Shelley Reynolds",
+      "text": "Reynolds has identified customer experience, digital transformation and the use of client feedback in operational decision-making among her priorities in the permanent role.",
+      "type": "paraphrase"
+    }
+  ],
+  "key_messages": [
+    {
+      "message": "Shelley Reynolds has been appointed as the permanent General Manager for Gallagher Bassett's South Australian operations.",
+      "supporting_excerpt": "Gallagher Bassett has appointed Shelley Reynolds (pictured) as general manager for South Australia, putting permanent leadership in place at one of the state’s two claims-agent operations as the company continues to develop and expand claims practices first used in the state."
+    },
+    {
+      "message": "Reynolds prioritizes customer experience, digital transformation, and the use of client feedback in her new role.",
+      "supporting_excerpt": "Reynolds has identified customer experience, digital transformation and the use of client feedback in operational decision-making among her priorities in the permanent role."
+    },
+    {
+      "message": "Gallagher Bassett's South Australian operation serves as a model for claims-management practices being expanded interstate.",
+      "supporting_excerpt": "The South Australian operation has also served as a base for claims-management practices that Gallagher Bassett has since taken interstate."
+    }
+  ],
+  "themes": [
+    "Leadership appointment",
+    "Claims management expansion",
+    "Customer experience focus"
+  ],
+  "other_organizations": [
+    {
+      "name": "ReturnToWorkSA",
+      "relation": "regulator",
+      "spokesperson": null
+    },
+    {
+      "name": "EML",
+      "relation": "competitor",
+      "spokesperson": null
+    },
+    {
+      "name": "Insurance Business",
+      "relation": "other",
+      "spokesperson": null
+    }
+  ]
+}

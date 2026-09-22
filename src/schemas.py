@@ -102,3 +102,44 @@ class AmplificationKit(BaseModel):
     primary_angle: str
     rationale: str
     posts: list[PublishablePost]
+
+
+class JudgedClaim(BaseModel):
+    phrase: str = Field(description="A short, exact substring copied from the draft")
+    verdict: Literal["supported", "unsupported", "distorted", "misattributed"]
+    evidence: str | None = Field(description="The article sentence that supports or contradicts the claim, or null if none")
+    explanation: str
+
+
+class FidelityVerdict(BaseModel):
+    claims: list[JudgedClaim]
+
+
+class RuleCheck(BaseModel):
+    rule_id: str
+    passed: bool
+    phrase: str | None = Field(description="If the rule fails, a short exact substring from the draft that breaks it; otherwise null")
+    explanation: str
+
+
+class VoiceChecklist(BaseModel):
+    checks: list[RuleCheck]
+
+
+class ReviewIssue(BaseModel):
+    phrase: str
+    category: str
+    severity: Literal["blocker", "warning"]
+    explanation: str
+    source: Literal["rule", "judge"]
+
+
+class PostReview(BaseModel):
+    channel: str
+    approved: bool
+    issues: list[ReviewIssue]
+
+
+class KitReview(BaseModel):
+    title: str | None
+    posts: list[PostReview]

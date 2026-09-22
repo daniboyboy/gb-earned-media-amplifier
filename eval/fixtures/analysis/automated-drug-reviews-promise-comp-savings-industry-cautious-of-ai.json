@@ -1,0 +1,74 @@
+{
+  "coverage_type": "expert_commentary",
+  "coverage_rationale": "The article discusses the use of automated drug review tools in the industry, with Gallagher Bassett providing expert commentary alongside other organizations.",
+  "gb_spokespeople": [
+    {
+      "name": "Leah Sharp",
+      "title": "Senior Vice President of GBCare and Managed Care",
+      "location": "Huntsville, Alabama"
+    }
+  ],
+  "gb_statements": [
+    {
+      "speaker": "Leah Sharp",
+      "text": "It’s never going to replace the judgment call",
+      "type": "direct_quote"
+    },
+    {
+      "speaker": "Leah Sharp",
+      "text": "At Gallagher Bassett Services, pharmacy benefit managers do not automatically decide drug authorizations, said Leah Sharp, Huntsville, Alabama-based senior vice president of GBCare and managed care.",
+      "type": "paraphrase"
+    },
+    {
+      "speaker": "Leah Sharp",
+      "text": "Clinical decision-support tools instead give resolution managers and clinical professionals real-time guidance based on state regulations, treatment guidelines, clinical evidence, health-risk scores and client rules, she said.",
+      "type": "paraphrase"
+    },
+    {
+      "speaker": "Leah Sharp",
+      "text": "AI is being used to summarize medical records, claim notes and treatment timelines, improving workflow without directing whether a drug should be approved or denied, she said.",
+      "type": "paraphrase"
+    }
+  ],
+  "key_messages": [
+    {
+      "message": "Gallagher Bassett emphasizes the importance of human judgment in drug authorization decisions, even when using automated tools.",
+      "supporting_excerpt": "It’s never going to replace the judgment call"
+    },
+    {
+      "message": "Gallagher Bassett uses AI to improve workflow by summarizing medical records and claim notes, but not to make drug approval decisions.",
+      "supporting_excerpt": "AI is being used to summarize medical records, claim notes and treatment timelines, improving workflow without directing whether a drug should be approved or denied, she said."
+    },
+    {
+      "message": "Gallagher Bassett's clinical decision-support tools provide real-time guidance to professionals based on various regulations and guidelines.",
+      "supporting_excerpt": "Clinical decision-support tools instead give resolution managers and clinical professionals real-time guidance based on state regulations, treatment guidelines, clinical evidence, health-risk scores and client rules, she said."
+    }
+  ],
+  "themes": [
+    "Automated drug review",
+    "Human oversight in AI",
+    "Pharmacy benefit management"
+  ],
+  "other_organizations": [
+    {
+      "name": "Enlyte",
+      "relation": "competitor",
+      "spokesperson": "Nikki Wilson"
+    },
+    {
+      "name": "Sedgwick Claims Management Services",
+      "relation": "competitor",
+      "spokesperson": "Andrew Newhouse"
+    },
+    {
+      "name": "California Applicants’ Attorneys Association",
+      "relation": "legal",
+      "spokesperson": "Tiffany Speers"
+    },
+    {
+      "name": "Boxer Law",
+      "relation": "legal",
+      "spokesperson": null
+    }
+  ]
+}

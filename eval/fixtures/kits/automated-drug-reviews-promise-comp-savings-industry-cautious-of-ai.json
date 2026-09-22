@@ -1,0 +1,30 @@
+{
+  "article_url": "https://www.businessinsurance.com/automated-drug-reviews-promise-comp-savings-industry-cautious-of-ai/",
+  "outlet": "Business Insurance",
+  "title": "Automated drug reviews promise comp savings; industry cautious of AI",
+  "primary_angle": "The importance of human judgment in drug authorization decisions alongside automated tools.",
+  "rationale": "This angle emphasizes GB's commitment to maintaining human oversight in critical decision-making processes, aligning with industry caution towards AI.",
+  "posts": [
+    {
+      "channel": "company_page",
+      "angle": "The importance of human judgment in drug authorization decisions alongside automated tools.",
+      "text": "How can automated drug reviews impact cost savings in claims management? Our expert, Leah Sharp, SVP of GBCare and Managed Care, shares insights into the balance between technology and human oversight. \"It’s never going to replace the judgment call,\" she notes. Learn how clinical decision-support tools guide professionals effectively without removing critical human input.\n\nRead the full article in Business Insurance: https://www.businessinsurance.com/automated-drug-reviews-promise-comp-savings-industry-cautious-of-ai/",
+      "quote_used": "It’s never going to replace the judgment call",
+      "character_count": 523
+    },
+    {
+      "channel": "spokesperson",
+      "angle": "Balancing technology and human oversight in drug approval.",
+      "text": "Excited to discuss the role of AI in pharmacy benefit management with Business Insurance. At Gallagher Bassett, we harness the power of AI to streamline workflows by summarizing medical records and claim notes, yet we ensure drug authorizations remain a human decision. It's about enhancing, not replacing, professional judgment.\n\nhttps://www.businessinsurance.com/automated-drug-reviews-promise-comp-savings-industry-cautious-of-ai/\n\n#ClaimsManagement #AI #PharmacyBenefits",
+      "quote_used": null,
+      "character_count": 474
+    },
+    {
+      "channel": "employee_advocacy",
+      "angle": "GB's commitment to human oversight in AI use for drug reviews.",
+      "text": "Gallagher Bassett is committed to maintaining human oversight in drug authorization decisions. Our clinical decision-support tools guide professionals with real-time data, ensuring that AI enhances, but never replaces, human judgment. Discover more in Business Insurance: https://www.businessinsurance.com/automated-drug-reviews-promise-comp-savings-industry-cautious-of-ai/",
+      "quote_used": null,
+      "character_count": 374
+    }
+  ]
+}

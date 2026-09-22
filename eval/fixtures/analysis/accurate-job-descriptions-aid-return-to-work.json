@@ -1,0 +1,124 @@
+{
+  "coverage_type": "expert_commentary",
+  "coverage_rationale": "Gallagher Bassett is one of several organizations providing expert commentary on the broader industry issue of return-to-work decisions in workers compensation cases.",
+  "gb_spokespeople": [
+    {
+      "name": "Irina Simpson",
+      "title": "Executive Vice President of Workers Compensation",
+      "location": "Philadelphia"
+    }
+  ],
+  "gb_statements": [
+    {
+      "speaker": "Irina Simpson",
+      "text": "The opportunity to receive all of the job descriptions and make sure they’re as current as possible is critical",
+      "type": "direct_quote"
+    },
+    {
+      "speaker": "Irina Simpson",
+      "text": "If you say light duty, what does that mean?",
+      "type": "direct_quote"
+    },
+    {
+      "speaker": "Irina Simpson",
+      "text": "If you say no heavy lifting, is it five pounds? Fifty-five pounds? The definitions can vary.",
+      "type": "direct_quote"
+    },
+    {
+      "speaker": "Irina Simpson",
+      "text": "Those outdated documents are often among the first warning signs that a return-to-work program may struggle, said Irina Simpson, Philadelphia-based executive vice president of workers compensation for Gallagher Bassett.",
+      "type": "paraphrase"
+    },
+    {
+      "speaker": "Irina Simpson",
+      "text": "Employers with mature return-to-work programs increasingly supplement written job descriptions with photographs, videos and detailed physical demands analyses that show physicians exactly what employees do throughout a workday, Ms. Simpson said (see related story below).",
+      "type": "paraphrase"
+    },
+    {
+      "speaker": "Irina Simpson",
+      "text": "Even then, communication can break down, she said.",
+      "type": "paraphrase"
+    },
+    {
+      "speaker": "Irina Simpson",
+      "text": "Adjusters may fail to obtain accurate job information, providers may receive incomplete documentation and supervisors may misunderstand medical restrictions when employees return to work.",
+      "type": "paraphrase"
+    },
+    {
+      "speaker": "Irina Simpson",
+      "text": "Employers increasingly supplement traditional job descriptions with photographs, videos and predictive analytics that help clinicians visualize job demands, said Irina Simpson, Philadelphia-based executive vice president of workers compensation for Gallagher Bassett.",
+      "type": "paraphrase"
+    },
+    {
+      "speaker": "Irina Simpson",
+      "text": "Machine learning models can identify claims that may benefit from earlier clinical intervention, while AI tools are beginning to analyze work restrictions and support return-to-work decisions.",
+      "type": "paraphrase"
+    },
+    {
+      "speaker": "Irina Simpson",
+      "text": "Future applications may even recommend accommodations to employers based on physician-recommended restrictions, she said.",
+      "type": "paraphrase"
+    }
+  ],
+  "key_messages": [
+    {
+      "message": "Keeping job descriptions current is critical for effective return-to-work programs.",
+      "supporting_excerpt": "The opportunity to receive all of the job descriptions and make sure they’re as current as possible is critical"
+    },
+    {
+      "message": "Employers with mature return-to-work programs use detailed physical demands analyses to aid physicians.",
+      "supporting_excerpt": "Employers with mature return-to-work programs increasingly supplement written job descriptions with photographs, videos and detailed physical demands analyses that show physicians exactly what employees do throughout a workday, Ms. Simpson said (see related story below)."
+    },
+    {
+      "message": "Communication breakdowns can occur even with updated job descriptions, affecting return-to-work outcomes.",
+      "supporting_excerpt": "Even then, communication can break down, she said."
+    },
+    {
+      "message": "Digital tools and AI are enhancing the connection between employers, adjusters, and medical providers.",
+      "supporting_excerpt": "Employers increasingly supplement traditional job descriptions with photographs, videos and predictive analytics that help clinicians visualize job demands, said Irina Simpson, Philadelphia-based executive vice president of workers compensation for Gallagher Bassett."
+    }
+  ],
+  "themes": [
+    "Return-to-work challenges",
+    "Importance of job descriptions",
+    "Role of technology",
+    "Communication in claims management"
+  ],
+  "other_organizations": [
+    {
+      "name": "Paradigm",
+      "relation": "competitor",
+      "spokesperson": "Steve Dadio"
+    },
+    {
+      "name": "Enlyte",
+      "relation": "competitor",
+      "spokesperson": "Tammy Bradly"
+    },
+    {
+      "name": "Broadspire",
+      "relation": "competitor",
+      "spokesperson": "Nesha Courtney"
+    },
+    {
+      "name": "Bober, Peterson & Koby",
+      "relation": "legal",
+      "spokesperson": "Jeff Adelson"
+    },
+    {
+      "name": "California Applicants’ Attorneys Association",
+      "relation": "legal",
+      "spokesperson": "Tiffany Speers"
+    },
+    {
+      "name": "Boxer Law",
+      "relation": "legal",
+      "spokesperson": null
+    },
+    {
+      "name": "Sedgwick",
+      "relation": "competitor",
+      "spokesperson": "Beth Burry Jackson"
+    }
+  ]
+}
