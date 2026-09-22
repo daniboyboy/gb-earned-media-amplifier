@@ -91,4 +91,7 @@ if __name__ == "__main__":
     except ValueError as error:
         print(f"\n✘ {error}")
     finally:
-        get_client().flush()
+        try:
+            get_client().flush()
+        except Exception:
+            pass
