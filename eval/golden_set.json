@@ -11,11 +11,13 @@
       "Those outdated documents are often among the first warning signs that a return-to-work program may struggle",
       "Employers with mature return-to-work programs increasingly supplement written job descriptions",
       "Even then, communication can break down",
+      "Adjusters may fail to obtain accurate job information",
       "Employers increasingly supplement traditional job descriptions with photographs, videos and predictive analytics",
-      "Machine learning models can identify claims that may benefit from earlier clinical intervention"
+      "Machine learning models can identify claims that may benefit from earlier clinical intervention",
+      "Future applications may even recommend accommodations to employers"
     ],
     "competitors": ["Paradigm", "Enlyte", "Broadspire", "Sedgwick"],
-    "notes": "Second Simpson quote is interrupted by 'Ms. Simpson said' and must be split into two segments. Article includes a related sidebar story where Simpson also appears."
+    "notes": "Second Simpson quote is interrupted by 'Ms. Simpson said' and must be split into two segments. Article includes a related sidebar story where Simpson also appears. Paraphrase anchors are one per sentence: unattributed sentences that continue a GB spokesperson's reported speech in the same paragraph count as paraphrases."
   },
   "automated-drug-reviews-promise-comp-savings-industry-cautious-of-ai": {
     "coverage_type": "expert_commentary",

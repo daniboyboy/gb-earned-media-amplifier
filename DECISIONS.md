@@ -72,3 +72,25 @@ Results: pending.
 | Non-verbatim excerpts | 2 | 1 | 0 | 0 |
 
 Result: all direct quotes recovered, including both segments of the interrupted quote. No items were skipped (coverage check passed). Remaining misses are two paraphrases whose attribution is indirect: a pronoun resolved across paragraphs, and a sentence covered by an attribution at the end of the following sentence.
+
+### Golden set refinement
+
+Paraphrase anchors in the return-to-work entry were originally one per paragraph, matching the paragraph-level output of prompt v1. After segmentation moved to sentence level, two anchors were added so that each sentence is evaluated on its own: "Future applications..." (which the model found) and "Adjusters may fail..." (which it did not). The change follows the segmentation granularity, not the model's output, and it lowers the score rather than raising it. Corrected v4 result: paraphrases 8/11.
+
+Failure pattern: the model finds every sentence with an explicit attribution but misses implicit ones — an unattributed sentence continuing a spokesperson's reported speech, a sentence covered by an attribution at the end of the next sentence, and a pronoun whose antecedent is in the previous paragraph.
+
+## Iteration 4 (prompt v5: news-writing attribution conventions)
+
+Change: rule 3 now states three general news-writing conventions: an end-of-paragraph attribution covers the preceding unattributed sentences; an unattributed sentence following a spokesperson's attributed sentence continues their reported speech; a pronoun in an attribution refers to the most recently named person, even across paragraphs. These are general conventions, not rules tailored to the golden set articles.
+
+| Metric | Baseline | v2 | v3 | v4 | v5 |
+|---|---|---|---|---|---|
+| Direct quotes | 4/6 | 4/6 | 4/6 | 6/6 | 6/6 |
+| Paraphrases | 6/9 | 6/9 | 7/9 | 8/11 | 11/11 |
+| Non-verbatim excerpts | 2 | 1 | 0 | 0 | 0 |
+
+Result: full recall on the development set, with no false positives (the number of extracted paraphrases equals the number expected in every article). Prompt iteration on the development set stops here; generalisation is tested on a held-out set of unseen articles.
+
+## Known limitation: no held-out set
+
+All three articles were used during prompt iteration, so the 11/11 result is a development-set score, not a measure of generalisation. A cleaner protocol would have reserved one article as a held-out test set before iterating. Two points limit the risk: verbatim fidelity is guaranteed by the architecture regardless of the article, and the attribution rules added in iteration 4 are general news-writing conventions rather than article-specific fixes. Evaluating on unseen coverage is the first step for any production use.
