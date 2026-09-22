@@ -1,6 +1,7 @@
 import os
 import re
 from pathlib import Path
+from src.usage import record
 
 from dotenv import load_dotenv
 from langfuse import get_client, observe
@@ -149,6 +150,7 @@ def parse_with(model_name: str, system: str, user: str, response_format):
         **extra,
     )
     message = completion.choices[0].message
+    record(completion, model_name)
     if message.parsed is None:
         raise ValueError(f"Judge did not return a valid response: {message.refusal}")
     return message.parsed

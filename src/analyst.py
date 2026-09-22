@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+from src.usage import record
 
 from dotenv import load_dotenv
 from langfuse import get_client, observe
@@ -83,6 +84,7 @@ def select_items(article: Article, segmented: SegmentedArticle) -> AnalystSelect
         response_format=AnalystSelection,
     )
     message = completion.choices[0].message
+    record(completion, MODEL)
     if message.parsed is None:
         raise ValueError(f"Model did not return a valid selection: {message.refusal}")
     return message.parsed

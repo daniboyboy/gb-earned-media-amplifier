@@ -9,10 +9,19 @@ from src.analyst import analyze_article
 from src.ingest import fetch_article, save_article
 from src.reviewer import review_kit
 from src.schemas import AmplificationKit, Article, ArticleAnalysis, KitReview
+from src.usage import track_usage
 from src.writer import build_kit, write_plan
 
 RESULTS_DIR = Path("outputs/results")
 DEFAULT_URL = "https://www.businessinsurance.com/accurate-job-descriptions-aid-return-to-work/"
+
+
+class StageMetrics(BaseModel):
+    seconds: float
+    input_tokens: int = 0
+    output_tokens: int = 0
+    cost_usd: float = 0.0
+    calls: int = 0
 
 
 class AmplificationResult(BaseModel):
@@ -21,27 +30,36 @@ class AmplificationResult(BaseModel):
     analysis: ArticleAnalysis
     kit: AmplificationKit
     review: KitReview
-    timings: dict[str, float]
+    metrics: dict[str, StageMetrics]
 
 
-def timed(timings: dict, step: str, func, *args):
+def timed(metrics: dict, step: str, func, *args):
     start = time.perf_counter()
-    result = func(*args)
-    timings[step] = round(time.perf_counter() - start, 1)
-    print(f"  ✔ {step} ({timings[step]}s)")
+    with track_usage() as usage:
+        result = func(*args)
+    metrics[step] = StageMetrics(seconds=round(time.perf_counter() - start, 1), **usage)
+    print(f"  ✔ {step} ({metrics[step].seconds}s, ${metrics[step].cost_usd:.4f})")
     return result
+
+
+def total_cost(metrics: dict) -> float:
+    return round(sum(stage.cost_usd for stage in metrics.values()), 4)
+
+
+def total_seconds(metrics: dict) -> float:
+    return round(sum(stage.seconds for stage in metrics.values()), 1)
 
 
 @observe(name="pipeline")
 def run_pipeline(url: str) -> AmplificationResult:
-    timings = {}
-    article = timed(timings, "ingest", fetch_article, url)
+    metrics = {}
+    article = timed(metrics, "ingest", fetch_article, url)
     slug = save_article(article).stem
-    analysis = timed(timings, "analyse", analyze_article, article)
-    plan = timed(timings, "write", write_plan, article, analysis)
+    analysis = timed(metrics, "analyse", analyze_article, article)
+    plan = timed(metrics, "write", write_plan, article, analysis)
     kit = build_kit(article, plan)
-    review = timed(timings, "review", review_kit, kit, article, analysis)
-    return AmplificationResult(slug=slug, article=article, analysis=analysis, kit=kit, review=review, timings=timings)
+    review = timed(metrics, "review", review_kit, kit, article, analysis)
+    return AmplificationResult(slug=slug, article=article, analysis=analysis, kit=kit, review=review, metrics=metrics)
 
 
 def save_result(result: AmplificationResult) -> Path:
@@ -61,7 +79,7 @@ def print_result(result: AmplificationResult, path: Path) -> None:
         for issue in review.issues:
             icon = "⛔" if issue.severity == "blocker" else "⚠"
             print(f"   {icon} [{issue.category}] \"{issue.phrase[:70]}\"")
-    print(f"\nTotal time: {sum(result.timings.values()):.1f}s | Saved to: {path}")
+    print(f"\nTotal: {total_seconds(result.metrics)}s · ${total_cost(result.metrics):.4f} | Saved to: {path}")
 
 
 if __name__ == "__main__":

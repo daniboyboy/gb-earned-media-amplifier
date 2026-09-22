@@ -1,0 +1,196 @@
+{
+  "slug": "automated-drug-reviews-promise-comp-savings-industry-cautious-of-ai",
+  "article": {
+    "url": "https://www.businessinsurance.com/automated-drug-reviews-promise-comp-savings-industry-cautious-of-ai/",
+    "outlet": "Business Insurance",
+    "title": "Automated drug reviews promise comp savings; industry cautious of AI",
+    "published_date": "2026-08-12",
+    "region": "US",
+    "text": "Automated prescription-review tools are helping workers compensation claims administrators identify high-priced drugs, flag polypharmacy risks and enforce clinical rules, but experts caution that the technology must not replace individualized review.\nThe tools can screen prescriptions against formularies, treatment histories, state requirements and lists of excessively priced or low-value products. They can also flag duplicate therapies, drug interactions and high-dose opioids for clinical review.\nAn Enlyte report released July 31 found that clients using integrated pharmacy benefit management, medical bill review and clinical decision-support capabilities reduced total pharmacy spending by 18.4%. Out-of-network prescriptions generated 58% of the savings despite representing a smaller share of prescription volume.\nInterventions involving so-called opportunistic products generated average savings of $915 per prescription, nearly four times the savings from other clinical interventions, Enlyte said. For clients using automated decision rules, 49% of opportunistic-product savings required no claims examiner intervention.\nEnlyte uses rules and clinical messages developed and maintained by pharmacists, not artificial intelligence, said Nikki Wilson, the company’s Omaha, Nebraska-based senior director of clinical pharmacy services.\nWhen a prescription requires prior authorization, the system gives the claims examiner a recommendation based on the client’s plan design, formulary, prescription history and applicable clinical and regulatory rules. Some clients authorize rules that automatically return an initial denial for products identified as high-cost and low-value, but examiners can overturn it, she said.\n“There’s a human in the loop always,” Ms. Wilson said.\nOpportunistic products include private-label topical analgesics containing ingredients available in less expensive products and convenience packs that combine existing drugs and supplies under a new product code, she added.\nAt Gallagher Bassett Services, pharmacy benefit managers do not automatically decide drug authorizations, said Leah Sharp, Huntsville, Alabama-based senior vice president of GBCare and managed care.\nClinical decision-support tools instead give resolution managers and clinical professionals real-time guidance based on state regulations, treatment guidelines, clinical evidence, health-risk scores and client rules, she said.\nAI is being used to summarize medical records, claim notes and treatment timelines, improving workflow without directing whether a drug should be approved or denied, she said.\n“It’s never going to replace the judgment call,” Ms. Sharp said.\nPrescription-screening tools can organize cases by severity and move potentially dangerous polypharmacy cases to the front of the review queue, said Andrew Newhouse, Rochester, Michigan-based director of clinical pharmacy at Sedgwick Claims Management Services.\nIf a worker is taking multiple medications, the system can quickly identify possible interactions, duplicate therapy or other concerns and prompt a pharmacist or claims professional to review the entire file, he said. That is particularly important because one drug can increase or reduce the effect of another, making the overall regimen difficult to balance, he added.\nThe technology does not change medications automatically, Mr. Newhouse said. A pharmacist can contact the prescriber, and any change remains a clinical decision. The routine substitution of an FDA-approved generic when a doctor has not required a brand-name drug is not an AI decision, he said.\nIn terms of best serving injured workers, the claimant’s bar is skeptical of automation and appreciates safeguards, said Tiffany Speers, Oakland, California-based president of the California Applicants’ Attorneys Association and an attorney with Boxer Law.\n“Automation is the first step of summarization of information,” she said. “An actual person needs to analyze that to make a sound decision.”",
+    "source": "url"
+  },
+  "analysis": {
+    "coverage_type": "expert_commentary",
+    "coverage_rationale": "Gallagher Bassett is one of several organizations providing insights on the use of automated tools in workers compensation claims management, indicating expert commentary on a broader industry topic.",
+    "gb_spokespeople": [
+      {
+        "name": "Leah Sharp",
+        "title": "Senior Vice President of GBCare and Managed Care",
+        "location": "Huntsville, Alabama"
+      }
+    ],
+    "gb_statements": [
+      {
+        "speaker": "Leah Sharp",
+        "text": "It’s never going to replace the judgment call",
+        "type": "direct_quote"
+      },
+      {
+        "speaker": "Leah Sharp",
+        "text": "At Gallagher Bassett Services, pharmacy benefit managers do not automatically decide drug authorizations, said Leah Sharp, Huntsville, Alabama-based senior vice president of GBCare and managed care.",
+        "type": "paraphrase"
+      },
+      {
+        "speaker": "Leah Sharp",
+        "text": "Clinical decision-support tools instead give resolution managers and clinical professionals real-time guidance based on state regulations, treatment guidelines, clinical evidence, health-risk scores and client rules, she said.",
+        "type": "paraphrase"
+      },
+      {
+        "speaker": "Leah Sharp",
+        "text": "AI is being used to summarize medical records, claim notes and treatment timelines, improving workflow without directing whether a drug should be approved or denied, she said.",
+        "type": "paraphrase"
+      }
+    ],
+    "key_messages": [
+      {
+        "message": "Gallagher Bassett emphasizes the importance of human judgment in drug authorization decisions, even when using automated tools.",
+        "supporting_excerpt": "It’s never going to replace the judgment call"
+      },
+      {
+        "message": "Gallagher Bassett uses AI to improve workflow by summarizing medical records and claim notes, but not to make drug approval decisions.",
+        "supporting_excerpt": "AI is being used to summarize medical records, claim notes and treatment timelines, improving workflow without directing whether a drug should be approved or denied, she said."
+      },
+      {
+        "message": "Gallagher Bassett's clinical decision-support tools provide real-time guidance to professionals based on various regulations and guidelines.",
+        "supporting_excerpt": "Clinical decision-support tools instead give resolution managers and clinical professionals real-time guidance based on state regulations, treatment guidelines, clinical evidence, health-risk scores and client rules, she said."
+      }
+    ],
+    "themes": [
+      "AI in claims management",
+      "Human oversight in automation",
+      "Pharmacy benefit management"
+    ],
+    "other_organizations": [
+      {
+        "name": "Enlyte",
+        "relation": "competitor",
+        "spokesperson": "Nikki Wilson"
+      },
+      {
+        "name": "Sedgwick Claims Management Services",
+        "relation": "competitor",
+        "spokesperson": "Andrew Newhouse"
+      },
+      {
+        "name": "California Applicants’ Attorneys Association",
+        "relation": "legal",
+        "spokesperson": "Tiffany Speers"
+      },
+      {
+        "name": "Boxer Law",
+        "relation": "legal",
+        "spokesperson": null
+      }
+    ]
+  },
+  "kit": {
+    "article_url": "https://www.businessinsurance.com/automated-drug-reviews-promise-comp-savings-industry-cautious-of-ai/",
+    "outlet": "Business Insurance",
+    "title": "Automated drug reviews promise comp savings; industry cautious of AI",
+    "primary_angle": "Gallagher Bassett highlights the balance between AI automation and human judgment in claims management.",
+    "rationale": "This angle aligns with GB's focus on practical strategies and insights, showcasing their commitment to combining technology with human expertise for optimal outcomes.",
+    "posts": [
+      {
+        "channel": "company_page",
+        "angle": "AI complements human expertise in claims.",
+        "text": "How can AI enhance claims management without replacing human judgment? Leah Sharp, SVP — GBCare and Managed Care, shares insights in Business Insurance. While AI aids in summarizing medical records and improving workflows, it's human judgment that remains crucial in drug authorization decisions. Read more in Business Insurance: https://www.businessinsurance.com/automated-drug-reviews-promise-comp-savings-industry-cautious-of-ai/",
+        "quote_used": "It’s never going to replace the judgment call",
+        "character_count": 432
+      },
+      {
+        "channel": "spokesperson",
+        "angle": "Insight into AI's role in claims management.",
+        "text": "In my recent conversation with Business Insurance, I highlighted the role of AI in claims management at Gallagher Bassett. While AI helps streamline workflows by summarizing medical records, it doesn't dictate drug approval decisions. Our clinical decision-support tools provide real-time guidance, ensuring that human expertise remains central to our process.\n\nhttps://www.businessinsurance.com/automated-drug-reviews-promise-comp-savings-industry-cautious-of-ai/\n\n#ClaimsManagement #AI #PharmacyBenefits",
+        "quote_used": null,
+        "character_count": 505
+      },
+      {
+        "channel": "employee_advocacy",
+        "angle": "AI supports but doesn't replace human judgment.",
+        "text": "AI is transforming claims management by enhancing workflow efficiencies at Gallagher Bassett. However, drug authorization decisions still rely on human judgment, ensuring the best outcomes for clients.\n\nhttps://www.businessinsurance.com/automated-drug-reviews-promise-comp-savings-industry-cautious-of-ai/\n\n#ClaimsManagement",
+        "quote_used": null,
+        "character_count": 324
+      }
+    ]
+  },
+  "review": {
+    "title": "Automated drug reviews promise comp savings; industry cautious of AI",
+    "posts": [
+      {
+        "channel": "company_page",
+        "approved": true,
+        "issues": []
+      },
+      {
+        "channel": "spokesperson",
+        "approved": true,
+        "issues": [
+          {
+            "phrase": "In my recent conversation with Business Insurance",
+            "category": "structure",
+            "severity": "warning",
+            "explanation": "cta_outlet: The post does not end with a call to action that names the outlet.",
+            "source": "judge"
+          }
+        ]
+      },
+      {
+        "channel": "employee_advocacy",
+        "approved": false,
+        "issues": [
+          {
+            "phrase": "AI is transforming claims management",
+            "category": "unsupported_claim",
+            "severity": "blocker",
+            "explanation": "The article mentions that AI is used to summarize medical records, claim notes, and treatment timelines, but it does not state that AI is transforming claims management as a whole.",
+            "source": "judge"
+          },
+          {
+            "phrase": "ensuring the best outcomes for clients",
+            "category": "unsupported_claim",
+            "severity": "blocker",
+            "explanation": "The article does not discuss or claim that relying on human judgment ensures the best outcomes for clients. This is an added benefit not covered in the article.",
+            "source": "judge"
+          },
+          {
+            "phrase": "ensuring the best outcomes for clients.",
+            "category": "structure",
+            "severity": "warning",
+            "explanation": "cta_outlet: The post does not end with a call to action that names the outlet.",
+            "source": "judge"
+          }
+        ]
+      }
+    ]
+  },
+  "metrics": {
+    "ingest": {
+      "seconds": 0.6,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0,
+      "calls": 0
+    },
+    "analyse": {
+      "seconds": 10.2,
+      "input_tokens": 3024,
+      "output_tokens": 774,
+      "cost_usd": 0.0153,
+      "calls": 1
+    },
+    "write": {
+      "seconds": 3.9,
+      "input_tokens": 1596,
+      "output_tokens": 318,
+      "cost_usd": 0.0072,
+      "calls": 1
+    },
+    "review": {
+      "seconds": 16.3,
+      "input_tokens": 7309,
+      "output_tokens": 1513,
+      "cost_usd": 0.0334,
+      "calls": 6
+    }
+  }
+}

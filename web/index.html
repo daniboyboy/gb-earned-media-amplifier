@@ -1,0 +1,63 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amplifier — earned media to LinkedIn</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E9B44C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M18.5 5.5a9 9 0 0 1 0 13"></path></svg>
+    <span class="name">Amplifier</span>
+    <span class="tag">Earned media to LinkedIn</span>
+  </div>
+  <button id="home-btn" type="button">New coverage</button>
+</header>
+
+<main>
+  <section id="view-home">
+    <p class="eyebrow">New coverage</p>
+    <h1 class="hero">Turn published coverage into a coordinated LinkedIn moment.</h1>
+    <p class="lede">Paste the link to an article featuring a Gallagher Bassett spokesperson. The agent finds what GB said, drafts three posts in GB’s voice and checks every claim against the source before a person approves.</p>
+    <form class="run" id="run-form">
+      <label for="url" class="hidden">Article URL</label>
+      <input id="url" name="url" type="url" required placeholder="https://www.businessinsurance.com/…">
+      <button type="submit" id="run-btn">Amplify coverage</button>
+    </form>
+    <p class="hint">Takes about 30 seconds. Nothing is published: every post waits for a person to approve it.</p>
+    <p class="error hidden" id="home-error"></p>
+    <div class="section-title"><h2 class="serif">Coverage already amplified</h2><span class="meta" id="result-count"></span></div>
+    <div class="cards" id="result-cards"></div>
+  </section>
+
+  <section id="view-running" class="hidden">
+    <p class="eyebrow">Working</p>
+    <h1 class="hero" id="running-url"></h1>
+    <div class="steps" id="step-list"></div>
+    <p class="error hidden" id="run-error"></p>
+  </section>
+
+  <section id="view-detail" class="hidden">
+    <div class="detail-head">
+      <div>
+        <p class="meta" id="detail-meta"></p>
+        <h1 class="hero" id="detail-title" style="font-size:40px"></h1>
+      </div>
+      <div class="tabs">
+        <button type="button" id="tab-analysis" class="active">Analysis</button>
+        <button type="button" id="tab-posts">Posts</button>
+      </div>
+    </div>
+    <div id="pane-analysis"></div>
+    <div id="pane-posts" class="hidden"></div>
+  </section>
+</main>
+
+<footer class="note">Prototype built for the Gallagher Bassett case study. Not affiliated with Gallagher Bassett. Article text belongs to the publishers linked from each post.</footer>
+
+<script src="/app.js"></script>
+</body>
+</html>

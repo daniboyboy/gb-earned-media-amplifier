@@ -1,6 +1,7 @@
 import os
 import re
 from pathlib import Path
+from src.usage import record
 
 from dotenv import load_dotenv
 from langfuse import get_client, observe
@@ -23,6 +24,8 @@ ANALYSIS_DIR = Path("outputs/analysis")
 KITS_DIR = Path("outputs/kits")
 VOICE_GUIDE_PATH = Path("src/voice_guide.md")
 
+CTA_PATTERNS = ["read more in", "read the full", "learn more in", "discover more", "check out", "explore the full", "see the full"]
+
 client = OpenAI()
 
 SYSTEM_PROMPT = """You are a senior B2B social media writer on the marketing team of Gallagher Bassett (GB), a claims management company. You turn a published media placement into a coordinated LinkedIn amplification plan.
@@ -35,7 +38,7 @@ Write exactly three posts:
 - employee_advocacy: a short post any GB employee can share.
 
 Fidelity rules (these always apply):
-1. Quotation marks may only contain text from QUOTABLE statements, copied exactly. PARAPHRASE statements may be conveyed in your own words, but never inside quotation marks and never presented as direct speech. Set quote_used to the exact QUOTABLE text you used, or null.
+1. Quotation marks may only contain text from QUOTABLE statements, copied exactly, character by character, including capitalisation and punctuation. PARAPHRASE statements may be conveyed in your own words, but never inside quotation marks and never presented as direct speech. Set quote_used to the exact QUOTABLE text you used, or null.
 2. Never mention other companies or organizations except the outlet. Never add facts, figures, claims or outcomes that are not in the analysis. Do not suggest that GB conducted research, created tools or achieved results unless the analysis says so.
 3. Never include a URL. End each body with a call to action on its own line that ends with a colon (for example "Read the full article in Business Insurance:"); the link is added automatically after it.
 
@@ -94,6 +97,7 @@ def write_plan(article: Article, analysis: ArticleAnalysis) -> AmplificationPlan
         response_format=AmplificationPlan,
     )
     message = completion.choices[0].message
+    record(completion, MODEL)
     if message.parsed is None:
         raise ValueError(f"Model did not return a valid plan: {message.refusal}")
     return message.parsed
@@ -101,6 +105,10 @@ def write_plan(article: Article, analysis: ArticleAnalysis) -> AmplificationPlan
 
 def assemble_text(body: str, url: str, hashtags: list[str]) -> str:
     body = re.sub(r"\s*#\w+", "", body).strip()
+    lines = [line.strip() for line in body.split("\n") if line.strip()]
+    if lines and not lines[-1].endswith(":") and any(p in lines[-1].lower() for p in CTA_PATTERNS):
+        lines[-1] = lines[-1].rstrip(".") + ":"
+    body = "\n\n".join(lines)
     text = f"{body} {url}" if body.endswith(":") else f"{body}\n\n{url}"
     if hashtags:
         text += "\n\n" + " ".join(f"#{tag.lstrip('#')}" for tag in hashtags)
