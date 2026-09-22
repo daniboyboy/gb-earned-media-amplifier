@@ -94,3 +94,13 @@ Result: full recall on the development set, with no false positives (the number 
 ## Known limitation: no held-out set
 
 All three articles were used during prompt iteration, so the 11/11 result is a development-set score, not a measure of generalisation. A cleaner protocol would have reserved one article as a held-out test set before iterating. Two points limit the risk: verbatim fidelity is guaranteed by the architecture regardless of the article, and the attribution rules added in iteration 4 are general news-writing conventions rather than article-specific fixes. Evaluating on unseen coverage is the first step for any production use.
+
+## Writer: GB voice guide
+
+The first writer version used generic LinkedIn tone rules and produced posts of 90 to 110 words, with hashtags and clichés ("pleased to announce", "invaluable", "leveraging") and several unsupported claims.
+
+Reference sample: 12 recent posts from the Gallagher Bassett company page and 20 from the parent company, Gallagher. Observed GB patterns: 30 to 90 words; hook, substance, call to action ending in a colon followed by the link; no hashtags; functional emojis only; "Name, Title" format with abbreviated seniority; measured enthusiasm reserved for news about people, partners or awards.
+
+These patterns are documented in `src/voice_guide.md` and loaded into the writer prompt, replacing the generic tone rules. Fidelity rules (exact quotes, no competitors, no unsupported claims, link added by code) remain in the prompt itself and always apply. Guidance for spokesperson and employee posts is an assumption, because the sample contained no examples of either.
+
+Observation: GB already uses tracked short links (okt.to), so the system delivers the original URL and the team applies its usual link tracking. This replaces the need for UTM parameters on third-party URLs.

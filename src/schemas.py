@@ -1,4 +1,4 @@
-from typing import Literal
+﻿from typing import Literal
 from pydantic import BaseModel, Field
 
 
@@ -71,3 +71,34 @@ class AnalystSelection(BaseModel):
     key_messages: list[KeyMessageDraft]
     themes: list[str]
     other_organizations: list[OtherOrganization]
+
+
+class LinkedInPost(BaseModel):
+    channel: Literal["company_page", "spokesperson", "employee_advocacy"]
+    angle: str = Field(description="One line: what this post emphasises")
+    body: str = Field(description="Post text without any URL or hashtags")
+    quote_used: str | None = Field(description="Exact QUOTABLE text used inside quotation marks, or null")
+    hashtags: list[str]
+
+
+class AmplificationPlan(BaseModel):
+    primary_angle: str
+    rationale: str
+    posts: list[LinkedInPost]
+
+
+class PublishablePost(BaseModel):
+    channel: str
+    angle: str
+    text: str
+    quote_used: str | None
+    character_count: int
+
+
+class AmplificationKit(BaseModel):
+    article_url: str
+    outlet: str | None
+    title: str | None
+    primary_angle: str
+    rationale: str
+    posts: list[PublishablePost]
