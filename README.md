@@ -1,8 +1,8 @@
-# Amplifier — earned media to LinkedIn
+﻿# Amplifier â€” earned media to LinkedIn
 
 An AI agent that turns a published media article into a coordinated LinkedIn amplification kit for a marketing team.
 
-**Live app: https://gb-amplifier-by-daniel-duque.onrender.com**
+**Live app: https://gb-earned-media-amplifier-test.onrender.com**
 
 Built by Daniel Duque for the Gallagher Bassett case study. Not affiliated with Gallagher Bassett.
 
@@ -18,14 +18,14 @@ Built by Daniel Duque for the Gallagher Bassett case study. Not affiliated with 
 |---|---|
 | Ingest or analyse the published article | Extracts clean body text and metadata (outlet, date, region) from a URL |
 | Identify key GB messages, spokesperson commentary and themes | An analyst agent attributes every quote and sentence in the article, then reports GB spokespeople, verbatim quotes, key messages and themes |
-| Develop appropriate LinkedIn copy | A writer agent produces three coordinated drafts — company page, spokesperson and employee advocacy — in GB's observed LinkedIn voice |
+| Develop appropriate LinkedIn copy | A writer agent produces three coordinated drafts â€” company page, spokesperson and employee advocacy â€” in GB's observed LinkedIn voice |
 | Retain a link back to the original media placement | The link is appended by code, never written by a model, and the reviewer verifies it appears exactly once |
 
 Beyond the minimum, a reviewer agent fact-checks every claim in every draft against the source article before a person sees it.
 
 ## How it works
 
-    URL → Ingest → Analyst → Writer → Reviewer → Amplification kit
+    URL â†’ Ingest â†’ Analyst â†’ Writer â†’ Reviewer â†’ Amplification kit
 
 **Ingest** (`src/ingest.py`) extracts the article text and captures the URL, outlet, publication date and region deterministically.
 
